@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ADBannerViewDelegate {
     var bannerView: ADBannerView!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        bannerView = ADBannerView(adType: .Banner)
+        bannerView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        bannerView.delegate = self
         return true
     }
 
